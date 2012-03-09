@@ -23,13 +23,9 @@ ERROR_REPORTING(E_ALL);
 //////////////////////
 // general config
 //////////////////////
-// name of the DB tables, set up a prefix (e.g. a number) if you want to set up multiple instances
+// optional - set up a prefix (e.g. a number) if you want to set up multiple instances
+// the tables will be named ro_mvpX_info and ro_mvpX_log, whereas X represents your prefix
 $prefix = '';
-$config['table'] = 'ro_mvp_info';
-$config['table2'] = 'ro_mvp_log';
-
-$config['table'] = $prefix.$config['table'];
-$config['table2'] = $prefix.$config['table2'];
 
 // at what remaining ETA (in minutes) should the row begin displaying in orange?
 $config['critical'] = 10;
@@ -138,6 +134,8 @@ function mysql_real_escape_string_fixed($input) {
 	}
 }
 
+$config['table'] = 'ro_mvp'.$prefix.'_info';
+$config['table2'] = 'ro_mvp'.$prefix.'_log';
 
 $sql = "SET NAMES 'utf8'";
 mysql_query($sql);

@@ -8,6 +8,12 @@ table {
 	text-align: center;
 }
 
+body {
+	margin:0;
+	padding:8px;
+	background: url("../img/background.png") repeat;
+}
+
 table {
 	background: #333333;
 	border: 1px solid white;

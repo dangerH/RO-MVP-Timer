@@ -30,7 +30,7 @@ PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Ragnarok Online MVP Timer - Log</title>
 <link rel="stylesheet" href="css/style.css" type="text/css" />
-<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
 </head>
 <body onload="init()">
 <h1>Ragnarok Online MVP Timer</h1>

@@ -1,5 +1,54 @@
 <?php
+
 ERROR_REPORTING(E_ALL);
+
+//////////////////////
+// general config
+//////////////////////
+// name of the DB tables, set up a prefix (e.g. a number) if you want to set up multiple instances
+$prefix = '';
+$config['table'] = 'ro_mvp_info';
+$config['table2'] = 'ro_mvp_log';
+
+$config['table'] = $prefix.$config['table'];
+$config['table2'] = $prefix.$config['table2'];
+
+// at what remaining ETA (in minutes) should the row begin displaying in orange?
+$config['critical'] = 10;
+
+// when multi-guild mode is enabled, spawntimes will only be visible to the user that entered them unless 'FFA' is set
+// experimental!
+$config['multiguild'] = 0;
+
+//////////////////////
+// monster types
+//////////////////////
+// the list of monster types can easily be expandanded,
+// e.g. adding $config['types'][3]['name'] = "Random" and $config['types'][3]['active']=1 will display
+// a new category with every monster inside the DB that has its type set to 3
+
+//name to display for categories and their current state
+// regular MVPs
+$config['types'][0]['name'] = 'MVP';
+$config['types'][0]['active'] = 1; // set to 0 to disable
+
+// guild dungeon MVPs
+$config['types'][1]['name'] = 'GD MVP';
+$config['types'][1]['active'] = 1; // set to 0 to disable
+
+// minibosses
+$config['types'][2]['name'] = 'Miniboss';
+$config['types'][2]['active'] = 1; // set to 0 to disable
+
+
+//////////////////////
+// MySQL login data
+//////////////////////
+$sql_connect = mysql_connect('HOSTNAME', 'USERNAME', 'PASSWORD') OR Die("Could not connect to MySQL server");
+$sql_selectdb = mysql_select_db('DATABASE') OR Die("Could not select database");
+
+
+// only change the following parts if you know what you're doing
 function getmicrotime()
 {
 	list($usec,$sec)=explode(" ",microtime());
@@ -20,38 +69,6 @@ $gmtint = (int) substr($gmtstring,1,2) * 60;
 $gmtint += (int) substr($gmtstring,3,2);
 $gmtint *= (strcmp($gmtstring,"-")>0)?60:-60; //server's GMT offset in minutes
 
-//name of mvp info table, simply add a unique number if you want to set up multiple instances
-$config['table'] = 'ro_mvp_info';
-
-//same for this one, just for logs
-$config['table2'] = 'ro_mvp_log';
-
-//at what remaining ETA (in minutes) should the row begin displaying in orange?
-$config['critical'] = 10;
-
-//when multi-guild mode is enabled, spawntimes will only be visible to the user that entered them, unless 'FFA' is set
-$config['multiguild'] = 1;
-
-//--the list of monster types can be expandanded, e.g. adding $config['types']['3']['name'] = "Random";
-//should normal mvp types be displayed? 0 = off, 1 = on
-$config['types'][0]['active'] = 1;
-
-//name to display for this category
-$config['types'][0]['name'] = 'MVP';
-
-
-//should normal guild-dungeon mvp types be displayed? 0 = off, 1 = on
-$config['types'][1]['active'] = 1;
-
-//name to display for this category
-$config['types'][1]['name'] = 'GD MVP';
-
-
-//should normal miniboss types be displayed? 0 = off, 1 = on
-$config['types'][2]['active'] = 1;
-
-//name to display for this category
-$config['types'][2]['name'] = 'Miniboss';
 
 //set/load/reset cookie for server sync
 $timediff = 0;
@@ -64,7 +81,7 @@ if(array_key_exists('resetdiff',$_POST)){
 	$expiretime = $time_sec+60*60*24*365*2;
 	setcookie('timediff', $timediff, $expiretime);
 } elseif(isset($_COOKIE['timediff'])) {
-	//maximum possible offset should be 25 hours
+	// limit maximum possible timezone difference to 25 hours
 	$timediff = (($_COOKIE['timediff']*$_COOKIE['timediff'])<(60*60*25*60*60*25))?$_COOKIE['timediff']:0;
 }
 
@@ -99,10 +116,6 @@ function mysql_real_escape_string_fixed($input) {
 	}
 }
 
-
-
-$sql_connect = mysql_connect('HOSTNAME', 'USERNAME', 'PASSWORD') OR Die("Could not connect to MySQL server");
-$sql_selectdb = mysql_select_db('DATABASE') OR Die("Could not select database");
 
 $sql = "SET NAMES 'utf8'";
 mysql_query($sql);

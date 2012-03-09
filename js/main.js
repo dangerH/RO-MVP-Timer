@@ -1,3 +1,7 @@
+/*
+/   Javascript functionality originally provided by Kageno, <kagenoATfreeDOTfr>
+*/
+
 var isDOM = (typeof(document.getElementById) != 'undefined' && typeof(document.createElement) != 'undefined') ? 1 : 0;
 var isIE4 = (typeof(document.all) != 'undefined' && parseInt(navigator.appVersion) >= 4) ? 1 : 0;
 var isNS4 = (typeof(document.layers) != 'undefined') ? 1 : 0;

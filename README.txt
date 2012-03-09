@@ -10,7 +10,8 @@ It's probably riddled with exploits, unnecessary redundancy and overall sillynes
 
 Install instructions:
 Enter your MySQL HOSTNAME, USERNAME, PASSWORD and DATABASE inside the config.inc.php
-Upload all the files to your FTP directory and run the install.php from there while praying to god almighty that no errors are returned!
+Upload all the files to your FTP directory and run the install.php from there. (If any errors occur, run around in panic and scream!)
+
 IMPORTANT: DELETE the install.php from your FTP after running it successfully.
 You should now be able to access the provided index.php.
 

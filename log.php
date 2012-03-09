@@ -158,9 +158,9 @@ if($logcount >0) {
 	</tr>
 <?php
 		foreach($log AS $key => $value) {
-			if(!$value['note'])
+			if($value['note']=='')
 				$value['note'] = "-";
-			if($config['multiguild'] && $_SERVER['REMOTE_USER'] != $value['user']) {
+			if(!$config['showip'] || ($config['multiguild'] && $_SERVER['REMOTE_USER'] != $value['user'])) {
 				$value['host'] = '***';
 				$value['ip'] = 'xx.xx.xx.xx';
 			}

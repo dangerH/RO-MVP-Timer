@@ -16,6 +16,9 @@ $config['table2'] = $prefix.$config['table2'];
 // at what remaining ETA (in minutes) should the row begin displaying in orange?
 $config['critical'] = 10;
 
+// show/hide IP addresses in the logs
+$config['showip'] = 1;
+
 // when multi-guild mode is enabled, spawntimes will only be visible to the user that entered them unless 'FFA' is set
 // experimental!
 $config['multiguild'] = 0;

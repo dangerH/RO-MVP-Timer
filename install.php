@@ -1,0 +1,130 @@
+<?php
+require("config.inc.php");
+//Create Table
+$sql = "CREATE TABLE IF NOT EXISTS `$config[table]` (
+  `id` tinyint(2) NOT NULL auto_increment,
+  `name` varchar(30) collate utf8_unicode_ci NOT NULL default '',
+  `type` tinyint(1) NOT NULL default '0',
+  `spawntime` smallint(3) NOT NULL default '0',
+  `spawnvariance` smallint(3) NOT NULL default '0',
+  `lastkill` int(10) NOT NULL default '0',
+  `lastname` varchar(15) collate utf8_unicode_ci NOT NULL default '',
+  `ffa` tinyint(1) NOT NULL default '0',
+  `note` varchar(255) collate utf8_unicode_ci NOT NULL default '',
+  `count` mediumint(4) NOT NULL default '0',
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci ;";
+$sql_query = mysql_query($sql)
+	OR DIE("ERROR: Could not Create MVP Table \"$config[table]\".");
+
+
+//Insert Values
+$sql = "INSERT INTO `$config[table]` (`id`, `name`, `type`, `spawntime`, `spawnvariance`, `lastkill`, `lastname`, `ffa`, `note`, `count`) VALUES
+(1, 'Turtle General', 0, 60, 10, 0, '0', 0, '', 0),
+(2, 'Stormy Knight', 0, 60, 10, 0, '0', 0, '', 0),
+(3, 'Incanation Samurai', 0, 90, 10, 0, '0', 0, '', 0),
+(4, 'Phreeoni', 0, 120, 10, 0, '0', 0, '', 0),
+(5, 'Pharaoh', 0, 60, 10, 0, '0', 0, '', 0),
+(6, 'Osiris', 0, 60, 10, 0, '0', 0, '', 0),
+(7, 'Orc Lord', 0, 120, 10, 0, '0', 0, '', 0),
+(8, 'Orc Hero', 0, 60, 10, 0, '0', 0, '', 0),
+(9, 'Moonlight Flower', 0, 60, 10, 0, '0', 0, '', 0),
+(10, 'Mistress', 0, 120, 10, 0, '0', 0, '', 0),
+(11, 'Maya', 0, 120, 10, 0, '0', 0, '', 0),
+(12, 'Maya', 1, 480, 10, 0, '0', 0, '', 0),
+(13, 'Lord of Death', 0, 133, 0, 0, '0', 0, '', 0),
+(14, 'Hatii', 0, 120, 10, 0, '0', 0, '', 0),
+(15, 'Gryphon (um_fild03)', 2, 60, 0, 0, '0', 0, '', 0),
+(16, 'Gryphon (cmd_fild08)', 2, 60, 0, 0, '0', 0, '', 0),
+(17, 'Golden Thief Bug', 0, 60, 10, 0, '0', 0, '', 0),
+(18, 'Ghostring (treasure2)', 2, 60, 0, 0, '0', 0, '', 0),
+(19, 'Ghostring (prt_maze03)', 2, 120, 0, 0, '0', 0, '', 0),
+(20, 'Ghostring (pay_fild04)', 2, 60, 0, 0, '0', 0, '', 0),
+(21, 'Evil Snake Lord', 0, 95, 10, 0, '0', 0, '', 0),
+(22, 'Eddga', 1, 480, 10, 0, '0', 0, '', 0),
+(23, 'Eddga', 0, 120, 10, 0, '0', 0, '', 0),
+(24, 'Drake', 0, 120, 10, 0, '0', 0, '', 0),
+(25, 'Dracula', 0, 60, 10, 0, '0', 1, '', 0),
+(26, 'Doppelganger', 0, 120, 10, 0, '0', 1, '', 0),
+(27, 'Dark Lord', 0, 60, 10, 0, '0', 0, '', 0),
+(28, 'Baphomet', 0, 120, 10, 0, '0', 1, '', 0),
+(29, 'Archangeling', 2, 60, 0, 0, '0', 0, '', 0),
+(30, 'Angeling (xmas_dun01)', 2, 60, 0, 0, '0', 0, '', 0),
+(31, 'Angeling (pay_fild04)', 2, 60, 0, 0, '0', 0, '', 0),
+(32, 'Amon Ra', 0, 60, 10, 0, '0', 0, '', 0),
+(33, 'Dark Lord', 1, 480, 10, 0, '0', 0, '', 0),
+(34, 'Doppelganger', 1, 480, 10, 0, '0', 0, '', 0),
+(35, 'Tao Gunka', 0, 123, 10, 0, '0', 0, '', 0),
+(36, 'Bloody Knight (gl_knt02)', 2, 60, 0, 0, '0', 0, '', 0),
+(37, 'Chepet', 2, 15, 0, 0, '0', 0, '', 0),
+(38, 'Chimera (gl_cas02)', 2, 120, 0, 0, '0', 0, '', 0),
+(39, 'Deviling', 2, 120, 0, 0, '0', 0, '', 0),
+(40, 'Dragon Fly', 2, 60, 0, 0, '0', 0, '', 0),
+(41, 'Executioner (c_tower4)', 2, 120, 0, 0, '0', 0, '', 0),
+(42, 'Ghostring (gld_dun04)', 2, 180, 0, 0, '0', 0, '', 0),
+(43, 'Maya Purple (anthell01)', 2, 120, 0, 0, '0', 0, '', 0),
+(44, 'Mutant Dragonoid', 2, 120, 0, 0, '0', 0, '', 0),
+(45, 'Mysteltainn (alde_dun04)', 2, 120, 0, 0, '0', 0, '', 0),
+(46, 'Tirfing (alde_dun04)', 2, 120, 0, 0, '0', 0, '', 0),
+(47, 'Toad (cmd_fild03)', 2, 60, 0, 0, '0', 0, '', 0),
+(48, 'Toad (gef_fild01)', 2, 60, 0, 0, '0', 0, '', 0),
+(49, 'Vagabond Wolf (gld_dun01)', 2, 240, 0, 0, '0', 0, '', 0),
+(50, 'Vagabond Wolf (moc_fild03)', 2, 30, 0, 0, '0', 0, '', 0),
+(51, 'Vagabond Wolf (prt_maze01)', 2, 60, 0, 0, '0', 0, '', 0),
+(52, 'Vagabond Wolf (prt_maze03)', 2, 60, 0, 0, '0', 0, '', 0),
+(53, 'Vocal (prt_fild04)', 2, 60, 0, 0, '0', 0, '', 0),
+(54, 'Vocal (prt_maze03)', 2, 30, 0, 0, '0', 0, '', 0),
+(55, 'Zealotus', 2, 60, 0, 0, '0', 0, '', 0),
+(56, 'Executioner (alde_dun04)', 2, 120, 0, 0, '0', 0, '', 0),
+(57, 'RSX-0806', 0, 125, 10, 0, '0', 0, '', 0),
+(58, 'White Lady', 0, 117, 10, 0, '0', 0, '', 0),
+(63, 'Valkyrie Randgris', 0, 480, 10, 0, '0', 0, '', 0),
+(59, 'Detardeurus', 0, 180, 10, 0, '0', 0, '', 0),
+(60, 'Egnigem Cenia', 0, 120, 10, 0, '0', 0, '', 0),
+(61, 'Biolabs3', 0, 100, 30, 0, '0', 0, '', 0),
+(62, 'Vesper', 0, 120, 10, 0, '0', 0, '', 0),
+(64, 'Kiel-D-01', 0, 120, 10, 0, '0', 0, '', 0),
+(65, 'Thanatos Phantom', 0, 120, 0, 0, '0', 0, '', 0),
+(66, 'Lady Tanee', 0, 420, 10, 0, '0', 0, '', 0),
+(69, 'Hydrolancer[1]', 3, 50, 0, 0, '0', 0, '', 0),
+(70, 'Hydrolancer[2]', 3, 50, 0, 0, '0', 0, '', 0),
+(71, 'Hydrolancer[3]', 3, 50, 0, 0, '0', 0, '', 0),
+(72, 'Valkyrie [odin_tem03]', 3, 30, 0, 0, '0', 0, '', 0),
+(73, 'Valkyrie [odin_tem03]', 3, 30, 0, 0, '0', 0, '', 0),
+(74, 'Valkyrie [odin_tem02]', 3, 90, 0, 0, '0', 0, '', 0),
+(75, 'Atroce[ra_fild02]', 0, 240, 10, 0, '0', 0, '', 0),
+(76, 'Atroce[ra_fild03]', 0, 180, 10, 0, '0', 0, '', 0),
+(77, 'Atroce[ra_fild04]', 0, 300, 10, 0, '0', 0, '', 0),
+(78, 'Atroce[ve_fild01]', 0, 300, 10, 0, '0', 0, '', 0),
+(79, 'Atroce[ve_fild02]', 0, 360, 10, 0, '0', 0, '', 0),
+(80, 'Beelzebub', 0, 720, 10, 0, '0', 0, '', 0),
+(81, 'Gloom Under Night', 0, 300, 10, 0, '0', 1, '', 0),
+(82, 'Fallen Bishop', 0, 120, 10, 0, '0', 0, '', 0),
+(83, 'Orc Hero[gef_fild02]', 0, 1440, 10, 0, '0', 0, '', 0),
+(84, 'Ifrit', 0, 660, 10, 0, '0', 0, '', 0),
+(85, 'Ktullanux', 0, 120, 0, 0, '0', 0, '', 0),
+(86, 'Wounded Morocc', 0, 720, 10, 0, '0', 0, '', 0);";
+$sql_query = mysql_query($sql)
+	OR DIE("ERROR: Could not insert MVP data set into \"$config[table]\".");
+
+//Create table2
+$sql = "CREATE TABLE IF NOT EXISTS `mvp_log_BLANK` (
+  `id` int(7) NOT NULL auto_increment,
+  `ip` varchar(15) collate utf8_unicode_ci NOT NULL default '',
+  `host` varchar(255) collate utf8_unicode_ci NOT NULL default '',
+  `agent` varchar(255) collate utf8_unicode_ci NOT NULL default '',
+  `changetime` int(10) NOT NULL default '0',
+  `user` varchar(15) collate utf8_unicode_ci NOT NULL default '',
+  `ffa` tinyint(1) NOT NULL default '0',
+  `note` varchar(255) collate utf8_unicode_ci NOT NULL default '',
+  `mvp_id` tinyint(3) NOT NULL default '0',
+  `time_old` int(10) NOT NULL default '0',
+  `time_new` int(10) NOT NULL default '0',
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci ;";
+$sql_query = mysql_query($sql)
+	OR DIE("ERROR: Could not create Log Table \"$config[table2]\".");
+
+echo "Installation complete, <b>delete the install.php</p> from your ftp Server now.<br>\n",
+	"You can visit the <a href=\"index.php\">Main page</a> after that.";
+?>

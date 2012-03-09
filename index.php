@@ -176,11 +176,12 @@ PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Ragnarok Online MVP Timer - Main</title>
 <link rel="stylesheet" href="css/style.css" type="text/css" />
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 </head>
 <body onload="init()">
 <h1>Ragnarok Online MVP Timer</h1>
 <? if($_SERVER['REMOTE_USER']=='Guest')
-	echo '<p>Notice: There doesn\'t appear to be .htaccess restriction in place, if you\'re looking for the proper value for your AuthUserFile it should be:<br />',$_SERVER['DOCUMENT_ROOT'],'.htpasswd</p>';
+	echo '<p>Notice: There doesn\'t appear to be .htaccess restriction in place, if you\'re looking for the proper value for your AuthUserFile it should be:<br />',preg_replace('/\/[^\/]*\z/','/.htpasswd',$_SERVER['SCRIPT_FILENAME']),'</p>';
 ?>
 Server date and time is<? echo (isset($_COOKIE['timediff'])?" synced to":""); ?>: <b><span id="sdt">-</span></b> <? /*echo date("\G\M\T O"); */?> <? /*echo date("I")>0?"[Daylight Saving ON]":""; */?>
 <?

@@ -108,7 +108,7 @@ $sql_query = mysql_query($sql)
 	or die("A critical MySQL error has occurred.<br />Your Query: " . $sql . "<br /> Error: (" . mysql_errno() . ") " . mysql_error());
 
 //Create table2
-$sql = "CREATE TABLE IF NOT EXISTS `mvp_log_BLANK` (
+$sql = "CREATE TABLE IF NOT EXISTS `$config[table2]` (
   `id` int(7) NOT NULL auto_increment,
   `ip` varchar(15) collate utf8_unicode_ci NOT NULL default '',
   `host` varchar(255) collate utf8_unicode_ci NOT NULL default '',

@@ -36,11 +36,11 @@ Require user Mandrake Muffley Strangelove
 (Try not to use any special characters your usernames or they might not work properly)
 
 Second: Add the desired username/password combination into your .htpasswd file.
-It should be 'username:password', only one user per line.
+It should be 'username:password', with only one user per line.
 DO NOT ENTER YOUR PASSWORDS IN PLAINTEXT; THIS WILL NOT WORK! (on Unix systems anyways)
 
 Visit: http://aspirine.org/htpasswd_en.html
-Choose 'Crypt (all Unix servers)', enter the desired username/password, and hit 'encrypt password'
+For algorithm choose 'Crypt (all Unix servers)', enter the desired username/password, and hit 'encrypt password'
 This should generate the proper line for your .htpasswd file.
 This also makes it convenient for new users to send their encrypted passwords to the person in charge of the FTP.
 No one wants to have their plaintext passwords revealed to other persons!

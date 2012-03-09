@@ -29,10 +29,6 @@ th.log-border {
 	border-bottom: 1px solid white;
 }
 
-/*
-span.defcursor {
-	cursor: default;
-}*/
 
 span {
 	cursor: default;
@@ -57,17 +53,8 @@ td.spawntime {
 	cursor: default;
 }
 
-/*tr.log {
-	background-color: #333;
-}
-tr.log:hover {
-	background-color: #000;
-}*/
-
-
 a,
 a:visited {
-/*	color: #999966; */
 	color: #ffa;
 	text-decoration: none;
 }

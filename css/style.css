@@ -1,0 +1,205 @@
+html,
+body,
+table {
+	background: black;
+	color: #FFFFFF;
+	font-family: verdana;
+	font-size: 10px;
+	text-align: center;
+}
+
+table {
+	background: #333333;
+	border: 1px solid white;
+}
+
+tr,
+td {
+	padding-bottom: 1px;
+	padding-top: 1px;
+}
+
+th.name,
+th.eta,
+th.updater,
+th.time,
+th.spawntime,
+th.log-border {
+	border-right: 1px solid white;
+	border-bottom: 1px solid white;
+}
+
+/*
+span.defcursor {
+	cursor: default;
+}*/
+
+span {
+	cursor: default;
+}
+
+th.interval,
+th.log-bottom {
+	border-bottom: 1px solid white;
+}
+
+td.log-dborder {
+	border-right: 1px solid white;
+}
+
+td.name,
+td.eta,
+td.spawntime {
+	border-right: 1px dotted white;
+}
+
+.spaneta {
+	cursor: default;
+}
+
+/*tr.log {
+	background-color: #333;
+}
+tr.log:hover {
+	background-color: #000;
+}*/
+
+
+a,
+a:visited {
+/*	color: #999966; */
+	color: #ffa;
+	text-decoration: none;
+}
+
+a.timelink,
+a.timelink:visited,
+a.timelink:hover,
+span.timelink {
+	display: block;
+	height: 14px;
+	width: 70px;
+}
+
+span.timelink {
+	cursor: default;
+}
+
+a.mvplink,
+a.mvplink:visited,
+a.mvplink:hover{
+	padding-left: 5px;
+	display: block;
+	height: 14px;
+	width: 175px;
+	cursor: default;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	text-align: left;
+	color: #ffa;
+	text-decoration: none;
+}
+
+a.logname{
+	padding-left: 5px;
+	display: block;
+	height: 12px;
+	width: 185px;
+	cursor: default;
+	text-align: left;
+}
+
+span.logname{
+	padding-left: 5px;
+	display: block;
+	height: 12px;
+	width: 185px;
+	text-align: left;
+}
+
+a img {
+	border: 0;
+}
+
+caption {
+	font-size: 12px;
+	padding-bottom: 10px;
+	padding-top: 10px;
+}
+
+.field,
+.field2,
+.notefield {
+	margin: 0;
+	padding: 1px;
+	border: 1px solid white;
+	color: white;
+	font-size: 9px;
+	font-family: verdana, arial;
+	background-color: #333333;
+	width:50px;
+}
+
+.field2 {
+	width: 50px;
+}
+
+.notefield {
+	width: 111px;
+}
+
+
+span.fill,
+span.note {
+	padding: 0;
+	margin: 0;
+	float: left;
+	display: block;
+	height: 14px;
+}
+
+span.fill {
+	width: 45px;
+}
+
+span.note {
+	width: 85px;
+}
+
+span.privmsg {
+	text-align: center;
+}
+
+a span.mvpname {
+	padding: 0;
+	margin: 0;
+	float: left;
+	display: block;
+	height: 14px;
+	width: 180px;
+	text-align: left;
+}
+
+.button,
+.ffabutton {
+	border: 1px solid white;
+	color: white;
+	font-size: 9px;
+	font-family: verdana, arial;
+	background-color: #333333;
+}
+
+.ffabutton {
+	padding-left: 2px;
+	padding-right: 2px;
+	width: 30px;
+}
+
+.hideme {
+	display: hidden;
+}
+
+form {
+	padding: 0;
+	margin: 0;
+}

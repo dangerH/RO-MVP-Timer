@@ -2,7 +2,7 @@ A simple Web-based MVP Timer for Ragnarok Online running on PHP and MySQL.
 It was created from scratch sometime during 2005 after seeing the basic concept being used by other guilds on euRO.
 
 There was a limited release back then, after which one person (Kageno) mailed me back an improved version with added
-JavaScript functionality and sanity checks (which I've since broken again, probably). I don't think I ever replied after that last mail.
+JavaScript functionality and sanity checks (which I've since broken again, probably). I don't think I've ever replied after that last mail.
 But hopefully even 7 years later my thanks are still welcome -- Thank you ever so much!
 
 CAUTION: This tool was created years ago and none of its contents should be considered good-practice PHP scripting.

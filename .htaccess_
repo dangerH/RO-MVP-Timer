@@ -1,0 +1,4 @@
+AuthName "Ragnarok Online MVP Timer"
+AuthType Basic
+AuthUserFile ROOT_DIRECTORY
+Require user 

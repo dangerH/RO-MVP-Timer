@@ -48,6 +48,7 @@ $sql_connect = mysql_connect('HOSTNAME', 'USERNAME', 'PASSWORD') OR Die("Could n
 $sql_selectdb = mysql_select_db('DATABASE') OR Die("Could not select database");
 
 
+//////////////////////
 // only change the following parts if you know what you're doing
 function getmicrotime()
 {

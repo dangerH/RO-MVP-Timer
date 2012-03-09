@@ -1,8 +1,9 @@
 A simple Web-based MVP Timer for Ragnarok Online running on PHP and MySQL.
-It was created from scratch sometime during 2005 after seeing the basic concept being used by some guild(s) on euRO already.
+It was created from scratch sometime during 2005 after seeing the basic concept being used by other guilds on euRO.
 
 There was a limited release back then, after which one person (Kageno) mailed me back an improved version with added
-JavaScript functionality and sanity checks (which I've since broken again, probably). I don't think I ever replied after that last mail. But hopefully even 7 years later my thanks are still welcome. Thank you ever so much!
+JavaScript functionality and sanity checks (which I've since broken again, probably). I don't think I ever replied after that last mail.
+But hopefully even 7 years later my thanks are still welcome -- Thank you ever so much!
 
 CAUTION: This tool was created years ago and none of its contents should be considered good-practice PHP scripting.
 It's probably riddled with exploits, unnecessary redundancy and overall sillyness you would expect from a script kiddy! Use at own risk.
@@ -40,10 +41,12 @@ DO NOT ENTER YOUR PASSWORDS IN PLAINTEXT; THIS WILL NOT WORK! (on Unix systems a
 Visit: http://aspirine.org/htpasswd_en.html
 Choose 'Crypt (all Unix servers)', enter the desired username/password, and hit 'encrypt password'
 This should generate the proper line for your .htpasswd file.
-This also makes it convenient for new users to send their encrypted passwords to the person in charge of the FTP. No one wants to have their plaintext passwords revealed to other persons!
+This also makes it convenient for new users to send their encrypted passwords to the person in charge of the FTP.
+No one wants to have their plaintext passwords revealed to other persons!
+
 So eventually the contents of the .htpasswd file should look similar to this:
 Mandrake:57ENy0uwfYAyg
 Muffley:KePgRECOS0s5M
 Strangelove:PADe4hxUxKg4U
 
-Save it and you should be done, congratulations!
+Finally save it and you should be done, congratulations!

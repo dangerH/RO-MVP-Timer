@@ -9,7 +9,7 @@ CAUTION: This tool was created years ago and none of its contents should be cons
 It's probably riddled with exploits, unnecessary redundancy and overall sillyness you would expect from a script kiddy! Use at own risk.
 
 Install instructions:
-Enter your MySQL HOSTNAME, LOGIN, PASSWORD and DATABASE inside the config.inc.php
+Enter your MySQL HOSTNAME, USERNAME, PASSWORD and DATABASE inside the config.inc.php
 Upload all the files to your FTP directory and run the install.php from there while praying to god almighty that no errors are returned!
 IMPORTANT: DELETE the install.php from your FTP after running it successfully.
 You should now be able to access the provided index.php.

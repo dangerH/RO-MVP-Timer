@@ -1,7 +1,7 @@
 <?php
 /********************************************************
 
- Copyright (C) 2012 Gandi <gandisuATgmailDOTcom>, Kageno <kagenoATfreeDOTfr>
+ Copyright (c) 2012 Gandi <gandisuATgmailDOTcom>, Kageno
 
  Background image provided by http://webtreats.mysitemyway.com/270-tileable-web-backgrounds/
 

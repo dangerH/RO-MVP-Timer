@@ -305,8 +305,8 @@ foreach($config['types'] as $key1 => $value1){
 					echo "		<form action=\"#type$key1\" method=\"post\" target=\"_self\" name=\"mvp$rownum\">\n";
 					echo "			<input ".(($value['note'])?"title=\"".htmlspecialchars($value['note'])."\" ":"")."class=\"notefield\" name=\"note\" type=\"text\" maxlength=\"255\" value=\"".htmlspecialchars($value['note'])."\"/>\n";
 					echo "			<input class=\"field\" name=\"newtime\" type=\"text\" maxlength=\"8\" title=\"Time format: HH:MM:SS, HH:MM, MM, or leave the field blank for current time\"/>\n";
-					echo "			<input class=\"button\" type=\"submit\" name=\"settime\" value=\"Set\" />\n";
-					echo "			<input class=\"button\" type=\"submit\" name=\"resettime\" value=\"Reset\" />\n";
+					echo "			<input class=\"setbutton\" type=\"submit\" name=\"settime\" value=\"Set\" />\n";
+					echo "			<input class=\"resetbutton\" type=\"submit\" name=\"resettime\" value=\"Reset\" />\n";
 					if($config['multiguild']) {
 						echo "			<input class=\"ffabutton\" type=\"submit\" name=\"setffa\" value=\"FFA\" />\n";
 						echo "			<input class=\"hideme\" type=\"hidden\" name=\"ffa\" value=\"".$value['ffa']."\" />\n";

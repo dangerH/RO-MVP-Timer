@@ -1,7 +1,9 @@
 <?php
 /********************************************************
 
- Copyright (C) 2012 Gandi <gandisuATgmailDOTcom>, Kageno <kagenoATfreeDOTfr>
+ Copyright (c) 2012 Gandi <gandisuATgmailDOTcom>, Kageno
+
+ Background image provided by http://webtreats.mysitemyway.com/270-tileable-web-backgrounds/
 
  Permission is hereby granted, free of charge, to any person obtaining a copy of this software
  and associated documentation files (the "Software"), to deal in the Software without restriction,
